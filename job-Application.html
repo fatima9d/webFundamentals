@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TechStart Careers: Job Application</title>
+</head>
+
+<body>
+    <header>
+        <h1>TechStart Careers</h1>
+        <h2>Job Application Form</h2>
+        <p>Thank you for your interest in joining our team! Please fill out all required fields marked with an asterisk
+            (*).</p>
+    </header>
+
+    <main>
+        <form action="/submit-application" method="post">
+
+            <!-- Section 1: Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <!-- Add your fields here -->
+
+                <!-- First Name (text input, required) -->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <br><br>
+
+                <!-- Last Name (text input, required) -->
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <br><br>
+                <!-- Date of Birth (date input) -->
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+                <br><br>
+                <!-- Gender (radio buttons) -->
+                <label>Gender:</label>
+
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+            </fieldset>
+
+            <!-- Section 2: Contact Details -->
+            <fieldset>
+                <legend>Contact Details</legend>
+
+                <!-- Email Address (email input, required) -->
+                <label for="email">Email Address:</label>
+
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com"
+                    aria-describedby="email-help">
+                <span id="email-help">We'll use this to contact you about your application</span>
+                <br><br>
+
+                <!-- Phone Number (tel input, required) -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +961 70 123 456" required>
+                <br><br>
+
+                <!-- Street Address (text input) -->
+                <label for="street">Street Address:</label>
+                <input type="text" id="street" name="street">
+                <br><br>
+
+                <!-- City (text input, required) -->
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <br><br>
+
+                <!-- State/Province (select dropdown) -->
+                <label for="state">State/Province:</label>
+                <select id="state" name="state">
+
+                    <option value="">-- Select State --</option>
+                    <option value="Beirut">Beirut</option>
+                    <option value="South">South Governorate</option>
+                    <option value="Mount Lebanon">Mount Lebanon</option>
+                    <option value="North">North Governorate</option>
+                    <option value="Bekaa">Bekaa Governorate</option>
+                    <option value="Baalbek-Hermel">Baalbek-Hermel</option>
+
+                </select>
+
+                <br><br>
+
+                <!-- ZIP/Postal Code (text input) -->
+                <label for="zip">ZIP/Postal Code:</label>
+                <input type="text" id="zip" name="zip">
+                <br><br>
+
+                <!-- Country (select dropdown) -->
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+
+                    <option value="Lebanon" selected>Lebanon</option>
+                    <option value="United States">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+
+                </select>
+
+
+            </fieldset>
+
+            <!-- Section 3: Position & Experience -->
+            <fieldset>
+                <legend>Position & Experience</legend>
+                <legend>Job Application Information</legend>
+
+                <!-- Position Applying For (required) -->
+                <label for="position">Position Applying For:</label>
+                <select id="position" name="position" required>
+
+                    <option value="">-- Select Position --</option>
+                    <option value="software-developer">Software Developer</option>
+                    <option value="web-developer">Web Developer</option>
+                    <option value="data-analyst">Data Analyst</option>
+                    <option value="ux-ui-designer">UX/UI Designer</option>
+                    <option value="project-manager">Project Manager</option>
+                    <option value="marketing-specialist">Marketing Specialist</option>
+                    <option value="other">Other</option>
+
+                </select>
+
+                <br><br>
+
+                <!-- Department Preference (radio buttons) -->
+                <label>Department Preference:</label>
+
+                <br>
+
+                <input type="radio" id="engineering" name="department" value="engineering" required>
+                <label for="engineering">Engineering</label>
+
+                <br>
+
+                <input type="radio" id="design" name="department" value="design">
+                <label for="design">Design</label>
+
+                <br>
+
+                <input type="radio" id="marketing" name="department" value="marketing">
+                <label for="marketing">Marketing</label>
+
+                <br>
+
+                <input type="radio" id="sales" name="department" value="sales">
+                <label for="sales">Sales</label>
+
+                <br>
+
+                <input type="radio" id="operations" name="department" value="operations">
+                <label for="operations">Operations</label>
+                <br><br>
+                <label for="experience">Experience Level:</label><br>
+                <input type="radio" id="entryLevel" name="experience" value="entry-level" required>
+                <label for="entryLevel">Entry Level (0-2 years)</label>
+
+                <br>
+
+                <input type="radio" id="midLevel" name="experience" value="mid-level">
+                <label for="midLevel">Mid Level (3-5 years)</label>
+
+                <br>
+
+                <input type="radio" id="seniorLevel" name="experience" value="senior-level">
+                <label for="seniorLevel">Senior Level (6-10 years)</label>
+
+                <br>
+
+                <input type="radio" id="leadManager" name="experience" value="lead-manager">
+                <label for="leadManager">Lead/Manager (10+ years)</label>
+
+                <br><br>
+
+
+                <!-- Current Employment Status -->
+                <label for="employmentStatus">Current Employment Status:</label>
+
+                <select id="employmentStatus" name="employmentStatus">
+
+                    <option value="">-- Select Employment Status --</option>
+                    <option value="employed">Employed</option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="student">Student</option>
+                    <option value="freelancer">Freelancer</option>
+                    <option value="other">Other</option>
+
+                </select>
+            </fieldset>
+
+            <!-- Section 4: Skills & Qualifications -->
+            <fieldset>
+                <legend>Skills & Qualifications</legend>
+                <br>
+
+                <!-- Highest Education Level -->
+                <label>Highest Education Level:</label>
+
+                <br>
+
+                <input type="radio" id="highSchool" name="education" value="high-school" required>
+                <label for="highSchool">High School</label>
+
+                <br>
+
+                <input type="radio" id="associate" name="education" value="associate-degree">
+                <label for="associate">Associate Degree</label>
+
+                <br>
+
+                <input type="radio" id="bachelor" name="education" value="bachelors-degree">
+                <label for="bachelor">Bachelor's Degree</label>
+
+                <br>
+
+                <input type="radio" id="master" name="education" value="masters-degree">
+                <label for="master">Master's Degree</label>
+
+                <br>
+
+                <input type="radio" id="phd" name="education" value="phd">
+                <label for="phd">PhD</label>
+
+                <br>
+
+                <input type="radio" id="otherEducation" name="education" value="other">
+                <label for="otherEducation">Other</label>
+
+                <br><br>
+
+
+                <!-- Technical Skills -->
+                <label>Technical Skills (select all that apply):</label>
+
+                <br>
+
+                <input type="checkbox" id="htmlCss" name="skills" value="html-css">
+                <label for="htmlCss">HTML/CSS</label>
+
+                <br>
+
+                <input type="checkbox" id="javascript" name="skills" value="javascript">
+                <label for="javascript">JavaScript</label>
+
+                <br>
+
+                <input type="checkbox" id="python" name="skills" value="python">
+                <label for="python">Python</label>
+
+                <br>
+
+                <input type="checkbox" id="java" name="skills" value="java">
+                <label for="java">Java</label>
+
+                <br>
+
+                <input type="checkbox" id="react" name="skills" value="react">
+                <label for="react">React</label>
+
+                <br>
+
+                <input type="checkbox" id="nodejs" name="skills" value="nodejs">
+                <label for="nodejs">Node.js</label>
+
+                <br>
+
+                <input type="checkbox" id="sql" name="skills" value="sql">
+                <label for="sql">SQL</label>
+
+                <br>
+
+                <input type="checkbox" id="gitGithub" name="skills" value="git-github">
+                <label for="gitGithub">Git/GitHub</label>
+                <br><br>
+
+                <!-- Years of Experience -->
+                <label for="experienceYears">Years of Experience in Field:</label>
+                <input type="number" id="experienceYears" name="experienceYears" min="0" max="50"
+                    placeholder="0-50 years">
+
+                <br><br>
+
+                <!-- Previous Salary -->
+                <label for="previousSalary">
+                    Previous Salary (USD per year):
+                </label>
+                <input type="number" id="previousSalary" name="previousSalary" min="0" placeholder="e.g. 50000">
+
+
+            </fieldset>
+
+            <!-- Section 5: Availability & Preferences -->
+            <fieldset>
+                <legend>Availability & Preferences</legend>
+                <br>
+
+                <!-- Earliest Start Date -->
+                <label for="startDate">Earliest Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+
+                <br><br>
+
+
+                <!-- Work Preference -->
+                <label>Work Preference:</label>
+
+                <br>
+
+                <input type="radio" id="fullTime" name="workPreference" value="full-time" required>
+                <label for="fullTime">Full-time</label>
+
+                <br>
+
+                <input type="radio" id="partTime" name="workPreference" value="part-time">
+                <label for="partTime">Part-time</label>
+
+                <br>
+
+                <input type="radio" id="contract" name="workPreference" value="contract">
+                <label for="contract">Contract</label>
+
+                <br>
+
+                <input type="radio" id="internship" name="workPreference" value="internship">
+                <label for="internship">Internship</label>
+
+                <br><br>
+
+
+                <!-- Remote Work Preference -->
+                <label>Remote Work Preference:</label>
+
+                <br>
+
+                <input type="radio" id="fullyRemote" name="remotePreference" value="fully-remote" required>
+                <label for="fullyRemote">Fully remote</label>
+
+                <br>
+
+                <input type="radio" id="hybrid" name="remotePreference" value="hybrid">
+                <label for="hybrid">Hybrid (2-3 days in office)</label>
+
+                <br>
+
+                <input type="radio" id="fullyOffice" name="remotePreference" value="fully-in-office">
+                <label for="fullyOffice">Fully in-office</label>
+
+                <br>
+
+                <input type="radio" id="noPreference" name="remotePreference" value="no-preference">
+                <label for="noPreference">No preference</label>
+
+                <br><br>
+
+
+                <!-- Willing to Relocate -->
+                <label>Willing to Relocate?</label>
+
+                <br>
+
+                <input type="radio" id="relocateYes" name="relocate" value="yes" required>
+                <label for="relocateYes">Yes</label>
+
+                <br>
+
+                <input type="radio" id="relocateNo" name="relocate" value="no">
+                <label for="relocateNo">No</label>
+
+                <br>
+
+                <input type="radio" id="relocateMaybe" name="relocate" value="maybe">
+                <label for="relocateMaybe">Maybe</label>
+                <br><br>
+
+                <!-- Expected Salary Range -->
+                <label for="expectedSalary">Expected Salary Range:</label>
+
+                <select id="expectedSalary" name="expectedSalary">
+
+                    <option value="">-- Select Salary Range --</option>
+                    <option value="30000-40000">$30,000 - $40,000</option>
+                    <option value="40000-55000">$40,000 - $55,000</option>
+                    <option value="55000-70000">$55,000 - $70,000</option>
+                    <option value="70000-85000">$70,000 - $85,000</option>
+                    <option value="85000-100000">$85,000 - $100,000</option>
+                    <option value="100000-plus">$100,000+</option>
+                    <option value="prefer-to-discuss">Prefer to discuss</option>
+
+                </select>
+            </fieldset>
+
+            <!-- Section 6: Application Materials -->
+            <fieldset>
+                <legend>Application Materials</legend>
+                <br><br>
+
+                <!-- Cover Letter -->
+                <label for="coverLetter">Cover Letter:</label>
+
+                <br>
+
+                <textarea id="coverLetter" name="coverLetter" rows="5" cols="60"
+                    placeholder="Tell us why you're interested in working at TechStart and what makes you a great fit for this role..."
+                    required></textarea>
+
+                <br><br>
+
+
+                <!-- How Did You Hear About Us? -->
+                <label for="hearAboutUs">How did you hear about us?</label>
+
+                <select id="hearAboutUs" name="hearAboutUs">
+
+                    <option value="">-- Select an option --</option>
+                    <option value="company-website">Company website</option>
+                    <option value="job-board">Job board (Indeed, LinkedIn, etc.)</option>
+                    <option value="social-media">Social media</option>
+                    <option value="friend-referral">Friend/colleague referral</option>
+                    <option value="recruiter">Recruiter</option>
+                    <option value="career-fair">Career fair</option>
+                    <option value="other">Other</option>
+
+                </select>
+
+                <br><br>
+
+
+                <!-- Additional Comments -->
+                <label for="additionalComments">Additional Comments:</label>
+
+                <br>
+
+                <textarea id="additionalComments" name="additionalComments" rows="3" cols="60"
+                    placeholder="Any additional information you'd like to share..."></textarea>
+
+
+            </fieldset>
+
+            <!-- Submission Section -->
+            <fieldset>
+                <legend>Submit Application</legend>
+                <fieldset>
+                    <legend>Submission</legend>
+
+                    <!-- Terms and Conditions -->
+                    <input type="checkbox" id="terms" name="terms" value="agreed" required>
+                    <label for="terms">
+                        I agree to the terms and conditions
+                    </label>
+
+                    <br><br>
+
+                    <!-- Submit Button -->
+                    <button type="submit">Submit Application</button>
+
+                    <!-- Reset Button -->
+                    <button type="reset">Clear Form</button>
+
+                </fieldset>
+            </fieldset>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechStart. Equal opportunity employer.</p>
+    </footer>
+</body>
+
+</html>
